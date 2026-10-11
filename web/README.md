@@ -1,17 +1,16 @@
 # auditor — web
 
-The landing page for the [auditor](https://github.com/marcelrapold/auditor) master-prompt
+The landing page for the [auditor](https://github.com/marcelrapold/mra-auditor) master-prompt
 library, served at [auditor.rapold.io](https://auditor.rapold.io).
 
 > [!NOTE]
 > **Management summary.** A multi-route Next.js 16 site that presents the audit library, the
 > shared six-phase method, and the two governing standards — with per-audit detail pages
 > (`/audits/<key>`) and a sample-report gallery (`/reports`), each mirrored in German under `/de`.
-> It is **ZVV-Atlas-conformant** — it
-> follows the Atlas tech stack and conventions (Next.js 16 App Router, Tailwind v4, shadcn/ui
-> new-york + neutral with HSL CSS-variable tokens, next-themes) — but ships auditor's own brand
-> (an emerald "verified" accent) and uses **no ZVV brand assets**, so it stays clean for a public
-> repo with no private dependency.
+> Its product mark (favicon, apple-touch icon, manifest icons, header/footer and Open Graph
+> mark) is the approved **Auditor signet from [Atlas](https://atlas.rapold.io)**, the Rapold
+> design system; the UI colours stay auditor's own emerald "verified" accent on shadcn/ui
+> HSL tokens.
 
 ## Stack
 
@@ -22,7 +21,7 @@ library, served at [auditor.rapold.io](https://auditor.rapold.io).
 | Components | shadcn/ui conventions (new-york, neutral, CSS variables) |
 | Theme | next-themes (class strategy, dark default) |
 | Motion | CSS-only scroll reveal via IntersectionObserver (respects `prefers-reduced-motion`) |
-| Icons | lucide-react + an inline GitHub mark |
+| Icons | lucide-react + an inline GitHub mark; product mark from [Atlas](https://atlas.rapold.io) |
 | Hosting | Vercel |
 
 ## Local development
@@ -64,8 +63,9 @@ web/
 │   │       ├── audits/[slug]/    German /de/audits/<key> (+ per-audit OG image)
 │   │       └── reports/          /de/reports gallery + /de/reports/[slug] detail
 │   ├── not-found.tsx        branded 404 (renders its own shell)
-│   ├── icon.svg             favicon (ShieldCheck mark)
-│   ├── apple-icon.tsx       180×180 apple-touch-icon (next/og)
+│   ├── icon.svg             favicon: Atlas Auditor signet (adapts to light/dark)
+│   ├── favicon.ico          16/32/48 favicon (Atlas export)
+│   ├── apple-icon.png       180×180 apple-touch-icon (Atlas export)
 │   ├── manifest.ts          PWA web app manifest
 │   ├── robots.ts            robots.txt
 │   └── sitemap.ts           sitemap.xml (/, /de, /audits/*, /reports/*)
@@ -81,8 +81,10 @@ web/
 │   ├── theme-toggle.tsx     light/dark toggle
 │   ├── mobile-nav.tsx       mobile disclosure navigation (Escape-to-close)
 │   ├── icons.tsx            inline GitHub mark
+│   ├── signet.tsx           Atlas Auditor signet (header/footer)
 │   └── ui/                  button (buttonVariants), badge (cva)
 ├── public/
+│   ├── icons/               manifest PNG icons (Atlas export, any + maskable)
 │   └── <key>.webp           per-audit hero images (auto-detected by lib/heroes.ts)
 └── lib/
     ├── content.ts        audits, principles, phases, standards, nav (single source)
@@ -92,7 +94,7 @@ web/
     ├── glossary.tsx      jargon terms + definitions for inline tooltips
     ├── i18n.ts           EN/DE dictionary + localizers (incl. report prose helpers)
     ├── site.ts           SITE_URL, TITLE, DESCRIPTION (shared by metadata/robots/sitemap)
-    ├── brand.ts          brand SVG paths (icon/OG)
+    ├── brand.ts          Atlas signet geometry + colours (header/footer/OG)
     ├── og.tsx            shared Open Graph image renderer
     └── utils.ts          cn()
 ```
@@ -130,7 +132,7 @@ vercel rollback      # promote a previous production deployment
 ```bash
 cd web
 vercel link                                   # team: muraschal, project: auditor
-vercel git connect https://github.com/marcelrapold/auditor.git
+vercel git connect https://github.com/marcelrapold/mra-auditor.git
 # Root Directory = web, Production Branch = main (set in Project Settings, or via the API)
 ```
 

@@ -7,6 +7,14 @@ Das Format folgt [Keep a Changelog](https://keepachangelog.com/), die Versionier
 
 ## [Unreleased]
 
+### Changed
+- Repository renamed to `marcelrapold/mra-auditor` (old URLs redirect): README badges, issue
+  templates, `llms.txt`, the orchestrator prompt, `REPORT-OUTPUT-STANDARD.md`, the GitHub Action
+  reference and the pin regex in `scripts/pin-locations.mjs` now use the new name.
+- Web: favicon, `favicon.ico`, apple-touch icon, manifest icons (any + maskable), header/footer
+  mark and the Open Graph mark are now the approved Auditor signet from
+  [Atlas](https://atlas.rapold.io); footer links "Designed with Atlas".
+
 ## [1.0.0] - 2026-09-16
 
 ### Added
@@ -285,14 +293,14 @@ Das Format folgt [Keep a Changelog](https://keepachangelog.com/), die Versionier
   `api`, `performance`, `data`, `infrastructure`, `ai-llm`.
 - README, MIT-Lizenz, `.gitignore`.
 
-[Unreleased]: https://github.com/marcelrapold/auditor/compare/v0.9.1...HEAD
-[0.9.1]: https://github.com/marcelrapold/auditor/releases/tag/v0.9.1
-[0.9.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.9.0
-[0.8.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.8.0
-[0.7.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.7.0
-[0.6.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.6.0
-[0.5.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.5.0
-[0.4.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.4.0
-[0.3.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.3.0
-[0.2.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.2.0
-[0.1.0]: https://github.com/marcelrapold/auditor/releases/tag/v0.1.0
+[Unreleased]: https://github.com/marcelrapold/mra-auditor/compare/v1.0.0...HEAD
+[0.9.1]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.9.1
+[0.9.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.9.0
+[0.8.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.8.0
+[0.7.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.7.0
+[0.6.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.6.0
+[0.5.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.5.0
+[0.4.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.4.0
+[0.3.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.3.0
+[0.2.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.2.0
+[0.1.0]: https://github.com/marcelrapold/mra-auditor/releases/tag/v0.1.0

@@ -280,7 +280,7 @@ function Proof({ lang }: { lang: Lang }) {
               <span className="size-2.5 rounded-full bg-border" />
               <span className="size-2.5 rounded-full bg-primary/40" />
               <span className="ml-2 min-w-0 truncate font-mono text-xs text-muted-foreground">
-                github.com/marcelrapold/auditor/issues
+                github.com/marcelrapold/mra-auditor/issues
               </span>
             </div>
             <div className="flex items-center justify-between gap-3 border-b border-border/60 px-4 py-2.5">

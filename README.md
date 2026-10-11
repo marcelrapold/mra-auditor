@@ -4,14 +4,20 @@ Master prompts that turn any AI coding agent into a swarm of specialist auditors
 engineering, frontend, API, performance, data, infrastructure, AI/LLM, compliance, accessibility,
 documentation, content, and lean.
 
-[![Release](https://img.shields.io/github/v/release/marcelrapold/auditor)](https://github.com/marcelrapold/auditor/releases)
-[![License](https://img.shields.io/github/license/marcelrapold/auditor)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/marcelrapold/auditor)](https://github.com/marcelrapold/auditor/commits)
+[![Release](https://img.shields.io/github/v/release/marcelrapold/mra-auditor)](https://github.com/marcelrapold/mra-auditor/releases)
+[![License](https://img.shields.io/github/license/marcelrapold/mra-auditor)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/marcelrapold/mra-auditor)](https://github.com/marcelrapold/mra-auditor/commits)
 [![Audits](https://img.shields.io/badge/audits-13-blue)](audit-prompts)
 [![Docs standard](https://img.shields.io/badge/docs%20standard-Google--grade-success)](DOCUMENTATION-STANDARD.md)
 [![Issue output](https://img.shields.io/badge/issues-DE%2FEN%20%2B%20tracker-informational)](ISSUE-OUTPUT-STANDARD.md)
 [![Website](https://img.shields.io/badge/website-auditor.rapold.io-10b981)](https://auditor.rapold.io)
 [![Readiness](https://img.shields.io/badge/readiness-SOC%202%20%C2%B7%20ISO%2027001%20%C2%B7%20ISO%2042001%20%C2%B7%20NIS2%2FCRA-8b5cf6)](CONTROL-CROSSWALK.md)
+[![Prompts](https://github.com/marcelrapold/mra-auditor/actions/workflows/prompts.yml/badge.svg)](https://github.com/marcelrapold/mra-auditor/actions/workflows/prompts.yml)
+[![Web](https://github.com/marcelrapold/mra-auditor/actions/workflows/web.yml/badge.svg)](https://github.com/marcelrapold/mra-auditor/actions/workflows/web.yml)
+
+**Website:** [auditor.rapold.io](https://auditor.rapold.io) · **Repository:**
+[marcelrapold/mra-auditor](https://github.com/marcelrapold/mra-auditor) · **Design:** product
+signet from [Atlas](https://atlas.rapold.io), the Rapold design system.
 
 > [!NOTE]
 > **Management summary.** `auditor` is a library of 13 reusable "master prompt" audit templates
@@ -203,12 +209,12 @@ An audit that runs once decays. Three pieces keep it alive between audits:
 - **Run-to-run diff.** `node scripts/diff-runs.mjs baseline.json current.json --fail-on
   new-p0p1,regression` answers "better or worse since the last audit?" — added, fixed, worsened,
   score and control deltas — and gates CI on it.
-- **GitHub Action.** `marcelrapold/auditor/.github/actions/verify@v1.0.0` validates the run,
+- **GitHub Action.** `marcelrapold/mra-auditor/.github/actions/verify@v1.0.0` validates the run,
   exports everything, writes the executive report into the job summary, diffs against a
   baseline, runs the checks and uploads SARIF to Code Scanning — no third-party action involved.
 
 ```yaml
-- uses: marcelrapold/auditor/.github/actions/verify@v1.0.0
+- uses: marcelrapold/mra-auditor/.github/actions/verify@v1.0.0
   with:
     run-file: auditor-out/audit-run.json
     baseline: auditor-out/baseline/audit-run.json
@@ -235,7 +241,7 @@ a consolidated, cross-audit backlog — a concrete trace of the input-to-issues 
 - **Output.** One master tracking issue plus one issue per finding, each with a management summary,
   evidence (`file:line`), a before/after fix, an effort estimate, and a re-audit criterion.
 
-See the run on GitHub: [master tracker #97](https://github.com/marcelrapold/auditor/issues/97)
+See the run on GitHub: [master tracker #97](https://github.com/marcelrapold/mra-auditor/issues/97)
 (scorecard, consolidated backlog, and a 30/60/90 roadmap) and the per-finding issues it links.
 
 ## Quickstart

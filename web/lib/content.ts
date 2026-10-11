@@ -18,7 +18,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-export const REPO = "https://github.com/marcelrapold/auditor";
+export const REPO = "https://github.com/marcelrapold/mra-auditor";
 export const PROMPTS = `${REPO}/blob/main/audit-prompts`;
 
 /** Latest release tag — single-sourced via scripts/bump-version.mjs. */

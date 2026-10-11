@@ -1,7 +1,7 @@
 # Releasing
 
 The library ships its prompts to external agents through pinned, immutable fetch URLs
-(`raw.githubusercontent.com/marcelrapold/auditor/vX.Y.Z/...`) plus a `CHECKSUMS.txt` manifest.
+(`raw.githubusercontent.com/marcelrapold/mra-auditor/vX.Y.Z/...`) plus a `CHECKSUMS.txt` manifest.
 A release is only correct if the pinned tag and the checksums both match the tagged tree, so the
 version pin and the checksums are treated as part of the release surface — never edited ad hoc.
 

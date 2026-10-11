@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
 import { GitHubMark } from "@/components/icons";
 import { MobileNav } from "@/components/mobile-nav";
+import { Signet } from "@/components/signet";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ATLAS_URL } from "@/lib/brand";
 import { REPO } from "@/lib/content";
 import { type Lang, t } from "@/lib/i18n";
 
@@ -55,7 +56,7 @@ export function SiteHeader({
           href={home}
           className="flex items-center gap-2 rounded-md font-mono text-sm font-semibold tracking-tight"
         >
-          <ShieldCheck aria-hidden className="size-5 text-primary" />
+          <Signet className="size-6" />
           auditor
         </Link>
         {nav.length > 0 ? (
@@ -114,8 +115,18 @@ export function SiteFooter({ lang }: { lang: Lang }) {
     <footer className="border-t border-border/60 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground sm:flex-row">
         <p className="flex items-center gap-2 font-mono">
-          <ShieldCheck aria-hidden className="size-4 text-primary" />
+          <Signet className="size-5" />
           {tt.footerLicense}
+          <span aria-hidden>·</span>
+          <a
+            href={ATLAS_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${tt.footerAtlas} ${tt.newTab}`}
+            className="rounded-md hover:text-foreground"
+          >
+            {tt.footerAtlas}
+          </a>
         </p>
         <nav aria-label="Footer" className="flex items-center gap-6">
           <Link href={reports} className="rounded-md hover:text-foreground">

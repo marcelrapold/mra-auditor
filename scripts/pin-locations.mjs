@@ -20,13 +20,13 @@
 export const PIN_LOCATIONS = [
   {
     file: "audit-prompts/full-audit-master-prompt.md",
-    // Every pinned fetch URL looks like .../marcelrapold/auditor/vX.Y.Z/...
-    re: () => /marcelrapold\/auditor\/(v\d+\.\d+\.\d+)\//g,
+    // Every pinned fetch URL looks like .../marcelrapold/mra-auditor/vX.Y.Z/...
+    re: () => /marcelrapold\/mra-auditor\/(v\d+\.\d+\.\d+)\//g,
     description: "orchestrator prompt raw-fetch URLs",
   },
   {
     file: "web/public/llms.txt",
-    re: () => /marcelrapold\/auditor\/(v\d+\.\d+\.\d+)\//g,
+    re: () => /marcelrapold\/mra-auditor\/(v\d+\.\d+\.\d+)\//g,
     description: "llms.txt raw-fetch URLs",
   },
   {

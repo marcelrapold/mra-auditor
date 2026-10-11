@@ -1,11 +1,12 @@
 import { ImageResponse } from "next/og";
-import { SHIELD_CHECK_PATH, SHIELD_PATH } from "@/lib/brand";
+import { SIGNET_BODY_PATH, SIGNET_COLORS, SIGNET_FACETS, SIGNET_VIEWBOX } from "@/lib/brand";
 
 export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
 
 // Shared 1200×630 social card, single-sourced from the brand SVG paths so the
-// English (/) and German (/de) Open Graph images stay visually identical.
+// English (/) and German (/de) Open Graph images stay visually identical. The
+// mark is the Atlas Auditor signet in its dark-surface colours.
 export function renderOgImage({
   title,
   subtitle,
@@ -38,18 +39,11 @@ export function renderOgImage({
             fontWeight: 600,
           }}
         >
-          <svg
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#10b981"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d={SHIELD_PATH} />
-            <path d={SHIELD_CHECK_PATH} />
+          <svg width="56" height="56" viewBox={SIGNET_VIEWBOX}>
+            <path fillRule="evenodd" fill={SIGNET_COLORS.dark.body} d={SIGNET_BODY_PATH} />
+            {SIGNET_FACETS.map((points) => (
+              <polygon key={points} fill={SIGNET_COLORS.dark.facet} points={points} />
+            ))}
           </svg>
           auditor
         </div>

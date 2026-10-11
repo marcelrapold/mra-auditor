@@ -217,7 +217,7 @@ An audit that runs once decays. Three pieces keep the run file alive between aud
 
 ### GitHub Action
 
-`marcelrapold/auditor/.github/actions/verify@<tag>` validates the run, exports every
+`marcelrapold/mra-auditor/.github/actions/verify@<tag>` validates the run, exports every
 deliverable, writes the executive report into the job summary, diffs against a baseline, runs
 the checks, and uploads `findings.sarif` to Code Scanning — with no third-party action.
 
@@ -232,7 +232,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@<pinned-sha>
-      - uses: marcelrapold/auditor/.github/actions/verify@v1.0.0
+      - uses: marcelrapold/mra-auditor/.github/actions/verify@v1.0.0
         with:
           run-file: auditor-out/audit-run.json
           baseline: auditor-out/baseline/audit-run.json   # optional
