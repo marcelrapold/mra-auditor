@@ -18,7 +18,7 @@ type NotApplicable = {
 
 /** One headline finding the run filed, linking its real GitHub issue. */
 type Finding = {
-  /** The real GitHub issue number (github.com/marcelrapold/mra-auditor/issues/<issue>). */
+  /** The real GitHub issue number (github.com/rapold-io/mra-auditor/issues/<issue>). */
   issue: number;
   severity: "P0" | "P1" | "P2" | "P3";
   /** Audit lenses that surfaced it (display tags). */
@@ -71,14 +71,14 @@ export function reportIssueUrl(n: number): string {
 
 /**
  * The seeded reports. Exactly ONE real run: the #97 self-audit, whose data is
- * single-sourced from the run's master tracker (github.com/marcelrapold/mra-auditor/issues/97)
+ * single-sourced from the run's master tracker (github.com/rapold-io/mra-auditor/issues/97)
  * and the README "Worked example". Add more REAL runs by appending here — every
  * field maps to a verifiable GitHub artifact; no field is invented.
  */
 export const REPORTS: Report[] = [
   {
     slug: "self-audit",
-    target: "marcelrapold/auditor",
+    target: "rapold-io/auditor",
     targetUrl: REPO,
     date: "2026-06-17",
     tracker: 97,

@@ -53,6 +53,6 @@ jobs:
             --exclude-path templates
             --exclude auditor\.rapold\.io
             --exclude makeareadme\.com
-            --exclude raw\.githubusercontent\.com/marcelrapold/mra-auditor
+            --exclude raw\.githubusercontent\.com/rapold-io/mra-auditor
             './**/*.md'
           fail: true
