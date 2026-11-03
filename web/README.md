@@ -1,6 +1,6 @@
 # auditor — web
 
-The landing page for the [auditor](https://github.com/marcelrapold/mra-auditor) master-prompt
+The landing page for the [auditor](https://github.com/rapold-io/mra-auditor) master-prompt
 library, served at [auditor.rapold.io](https://auditor.rapold.io).
 
 > [!NOTE]
@@ -132,7 +132,7 @@ vercel rollback      # promote a previous production deployment
 ```bash
 cd web
 vercel link                                   # team: muraschal, project: auditor
-vercel git connect https://github.com/marcelrapold/mra-auditor.git
+vercel git connect https://github.com/rapold-io/mra-auditor.git
 # Root Directory = web, Production Branch = main (set in Project Settings, or via the API)
 ```
 
